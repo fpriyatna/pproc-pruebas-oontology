@@ -1,0 +1,908 @@
+{
+  "@context" : {
+    "extinctionCause" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#extinctionCause",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "DynamicPurchasingSystemConclusionContract" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#DynamicPurchasingSystemConclusionContract"
+    },
+    "ProcedureResignation" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#ProcedureResignation"
+    },
+    "informationKind" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#informationKind",
+      "@type" : "@id"
+    },
+    "tenderPurpose" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#tenderPurpose",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "lot" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#lot",
+      "@type" : "@id"
+    },
+    "tenderCommitteeAppointmentDate" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#tenderCommitteeAppointmentDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "PrivateContract" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#PrivateContract"
+    },
+    "awardCriteriaCombination" : {
+      "@id" : "http://purl.org/procurement/public-contracts#awardCriteriaCombination",
+      "@type" : "@id"
+    },
+    "contractingAuthority" : {
+      "@id" : "http://purl.org/procurement/public-contracts#contractingAuthority",
+      "@type" : "@id"
+    },
+    "ConcessionContract" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#ConcessionContract"
+    },
+    "modificationScope" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#modificationScope",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "remedyInterposedTo" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#remedyInterposedTo",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "TenderRequirements" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#TenderRequirements"
+    },
+    "criterionEvaluationMode" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#criterionEvaluationMode",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "offeredEndDate" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#offeredEndDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "alternateMember" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#alternateMember",
+      "@type" : "@id"
+    },
+    "member" : {
+      "@id" : "http://xmlns.com/foaf/0.1/member",
+      "@type" : "@id"
+    },
+    "score" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#score",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "CorrectionNotice" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#CorrectionNotice"
+    },
+    "contractExecutionConditions" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#contractExecutionConditions",
+      "@type" : "@id"
+    },
+    "procedureType" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#procedureType",
+      "@type" : "@id"
+    },
+    "FrameworkDerivativeContract" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#FrameworkDerivativeContract"
+    },
+    "noticeSite" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#noticeSite",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ElectronicAuctionPhase" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#ElectronicAuctionPhase"
+    },
+    "constructionSubsidies" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#constructionSubsidies",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "frameworkAgreementDerivativeContract" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#frameworkAgreementDerivativeContract",
+      "@type" : "@id"
+    },
+    "tenderInformationProvider" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#tenderInformationProvider",
+      "@type" : "@id"
+    },
+    "urgencyType" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#urgencyType",
+      "@type" : "@id"
+    },
+    "AwardCriterion" : {
+      "@id" : "http://purl.org/procurement/public-contracts#AwardCriterion"
+    },
+    "ContractBodies" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#ContractBodies"
+    },
+    "offeredDuration" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#offeredDuration"
+    },
+    "AwardedTender" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#AwardedTender"
+    },
+    "PublicServicesManagementContract" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#PublicServicesManagementContract"
+    },
+    "startDate" : {
+      "@id" : "http://schema.org/startDate"
+    },
+    "contractAdditionalObligations" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#contractAdditionalObligations",
+      "@type" : "@id"
+    },
+    "PriorInformationNotice" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#PriorInformationNotice"
+    },
+    "contractTemporalConditions" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#contractTemporalConditions",
+      "@type" : "@id"
+    },
+    "Organization" : {
+      "@id" : "http://www.w3.org/ns/org#Organization"
+    },
+    "minNumberOfOperators" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#minNumberOfOperators",
+      "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+    },
+    "tenderMeeting" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#tenderMeeting",
+      "@type" : "@id"
+    },
+    "actualEndDate" : {
+      "@id" : "http://purl.org/procurement/public-contracts#actualEndDate"
+    },
+    "maxInvitations" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#maxInvitations",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "contractProcedureSpecifications" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#contractProcedureSpecifications",
+      "@type" : "@id"
+    },
+    "PublicPrivatePartnershipContract" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#PublicPrivatePartnershipContract"
+    },
+    "electronicAuctionWeb" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#electronicAuctionWeb",
+      "@type" : "@id"
+    },
+    "legalDocumentReference" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#legalDocumentReference",
+      "@type" : "@id"
+    },
+    "actualPrice" : {
+      "@id" : "http://purl.org/procurement/public-contracts#actualPrice",
+      "@type" : "@id"
+    },
+    "briefing" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#briefing",
+      "@type" : "@id"
+    },
+    "CriterionScore" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#CriterionScore"
+    },
+    "ExcludedTender" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#ExcludedTender"
+    },
+    "Committee" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#Committee"
+    },
+    "PublicWorksConcessionContract" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#PublicWorksConcessionContract"
+    },
+    "ContractModification" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#ContractModification"
+    },
+    "onBehalfOf" : {
+      "@id" : "http://purl.org/procurement/public-contracts#onBehalfOf",
+      "@type" : "@id"
+    },
+    "ObjectiveAwardCriterion" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#ObjectiveAwardCriterion"
+    },
+    "pricePercentageChange" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#pricePercentageChange",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "offeredPrice" : {
+      "@id" : "http://purl.org/procurement/public-contracts#offeredPrice",
+      "@type" : "@id"
+    },
+    "CommitteeMember" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#CommitteeMember"
+    },
+    "ProcedureWaive" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#ProcedureWaive"
+    },
+    "ContractModificationConditions" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#ContractModificationConditions"
+    },
+    "FrameworkAgreement" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#FrameworkAgreement"
+    },
+    "Notice" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#Notice"
+    },
+    "TenderMeeting" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#TenderMeeting"
+    },
+    "AdditionalInformationNotice" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#AdditionalInformationNotice"
+    },
+    "tenderBriefing" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#tenderBriefing",
+      "@type" : "@id"
+    },
+    "estimatedValue" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#estimatedValue",
+      "@type" : "@id"
+    },
+    "earlyTramitation" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#earlyTramitation",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "maxBudgetChange" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#maxBudgetChange",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "durationChange" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#durationChange",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "numberOfLots" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#numberOfLots",
+      "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+    },
+    "fullMember" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#fullMember",
+      "@type" : "@id"
+    },
+    "estimatedDuration" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#estimatedDuration"
+    },
+    "ContractNotice" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#ContractNotice"
+    },
+    "assumptionProtectingProcedureType" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#assumptionProtectingProcedureType",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "expectedCauseModification" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#expectedCauseModification",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "contractModification" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#contractModification",
+      "@type" : "@id"
+    },
+    "finalFinancialGuarantee" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#finalFinancialGuarantee",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "ExtendableContract" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#ExtendableContract"
+    },
+    "tenderSubmissionLocation" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#tenderSubmissionLocation",
+      "@type" : "@id"
+    },
+    "narrower" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#narrower",
+      "@type" : "@id"
+    },
+    "TenderCommittee" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#TenderCommittee"
+    },
+    "ServicesContract" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#ServicesContract"
+    },
+    "WorksContract" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#WorksContract"
+    },
+    "Concept" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    "otherAbilityRequisites" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#otherAbilityRequisites",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Contract" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#Contract"
+    },
+    "ContractWithLots" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#ContractWithLots"
+    },
+    "budgetPrice" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#budgetPrice",
+      "@type" : "@id"
+    },
+    "ContractEconomicConditions" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#ContractEconomicConditions"
+    },
+    "ContractResolution" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#ContractResolution"
+    },
+    "BuyContract" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#BuyContract"
+    },
+    "Remedy" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#Remedy"
+    },
+    "PrecomercialProcurement" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#PrecomercialProcurement"
+    },
+    "compulsoryMeansForExecution" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#compulsoryMeansForExecution",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ProcedureVoid" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#ProcedureVoid"
+    },
+    "tenderSubmissionSupportedLanguage" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#tenderSubmissionSupportedLanguage",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "remedyResolutionDate" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#remedyResolutionDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Event" : {
+      "@id" : "http://schema.org/Event"
+    },
+    "Offering" : {
+      "@id" : "http://purl.org/goodrelations/v1#Offering"
+    },
+    "SpecialAdministrativeContract" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#SpecialAdministrativeContract"
+    },
+    "OrdinaryAdministrativeRemedy" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#OrdinaryAdministrativeRemedy"
+    },
+    "resolutionDocumentReference" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#resolutionDocumentReference",
+      "@type" : "@id"
+    },
+    "Person" : {
+      "@id" : "http://xmlns.com/foaf/0.1/Person"
+    },
+    "reservedContractRestrictions" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#reservedContractRestrictions",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "managingDepartment" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#managingDepartment",
+      "@type" : "@id"
+    },
+    "maxFinalPriceChange" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#maxFinalPriceChange",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "tender" : {
+      "@id" : "http://purl.org/procurement/public-contracts#tender",
+      "@type" : "@id"
+    },
+    "LeaseContract" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#LeaseContract"
+    },
+    "priceReviewAllowable" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#priceReviewAllowable",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "maxSubcontracting" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#maxSubcontracting",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "requiredTechnicalAndProfessionalAbility" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#requiredTechnicalAndProfessionalAbility",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "procedureWaive" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#procedureWaive",
+      "@type" : "@id"
+    },
+    "ContractTemporalConditions" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#ContractTemporalConditions"
+    },
+    "criteronName" : {
+      "@id" : "http://purl.org/procurement/public-contracts#criteronName"
+    },
+    "ContractingBodyAgreement" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#ContractingBodyAgreement"
+    },
+    "ConclusionContract" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#ConclusionContract"
+    },
+    "TenderersRequirements" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#TenderersRequirements"
+    },
+    "websiteWithInformation" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#websiteWithInformation",
+      "@type" : "@id"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator"
+    },
+    "name" : {
+      "@id" : "http://schema.org/name"
+    },
+    "tenderManteinanceDuration" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#tenderManteinanceDuration"
+    },
+    "ContractAwardNotice" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#ContractAwardNotice"
+    },
+    "awardCriterion" : {
+      "@id" : "http://purl.org/procurement/public-contracts#awardCriterion",
+      "@type" : "@id"
+    },
+    "tenderAdmissionMeeting" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#tenderAdmissionMeeting",
+      "@type" : "@id"
+    },
+    "modificationReason" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#modificationReason",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "additionalDocumentReference" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#additionalDocumentReference",
+      "@type" : "@id"
+    },
+    "estimatedEndDate" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#estimatedEndDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "formalizedDate" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#formalizedDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "ContractAdditionalObligations" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#ContractAdditionalObligations"
+    },
+    "minInvitations" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#minInvitations",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "otherAwardTerms" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#otherAwardTerms",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "contractActivites" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#contractActivites",
+      "@type" : "@id"
+    },
+    "Tender" : {
+      "@id" : "http://purl.org/procurement/public-contracts#Tender"
+    },
+    "location" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#location",
+      "@type" : "@id"
+    },
+    "tenderCommitteeRole" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#tenderCommitteeRole",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "DerivativeContract" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#DerivativeContract"
+    },
+    "address" : {
+      "@id" : "http://schema.org/address"
+    },
+    "finalFinancialGuaranteeDuration" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#finalFinancialGuaranteeDuration"
+    },
+    "postalAddress" : {
+      "@id" : "http://schema.org/postalAddress"
+    },
+    "HarmonizedContract" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#HarmonizedContract"
+    },
+    "procedureVoid" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#procedureVoid",
+      "@type" : "@id"
+    },
+    "minSubcontracting" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#minSubcontracting",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "FormalizedTender" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#FormalizedTender"
+    },
+    "awardAgreement" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#awardAgreement",
+      "@type" : "@id"
+    },
+    "advertisementAmount" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#advertisementAmount",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "PostalAddress" : {
+      "@id" : "http://schema.org/PostalAddress"
+    },
+    "TechnicalCommittee" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#TechnicalCommittee"
+    },
+    "item" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#item",
+      "@type" : "@id"
+    },
+    "tenderersRequirements" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#tenderersRequirements",
+      "@type" : "@id"
+    },
+    "electronicAuction" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#electronicAuction",
+      "@type" : "@id"
+    },
+    "backwardCompatibleWith" : {
+      "@id" : "http://www.w3.org/2002/07/owl#backwardCompatibleWith"
+    },
+    "AcceptedTender" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#AcceptedTender"
+    },
+    "ContractObject" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#ContractObject"
+    },
+    "tenderRequirements" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#tenderRequirements",
+      "@type" : "@id"
+    },
+    "noticeDate" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#noticeDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "InformationProvider" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#InformationProvider"
+    },
+    "variantDescription" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#variantDescription",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "minutesDocumentReference" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#minutesDocumentReference",
+      "@type" : "@id"
+    },
+    "remedyResult" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#remedyResult",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ElectronicAuction" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#ElectronicAuction"
+    },
+    "complementaryContract" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#complementaryContract",
+      "@type" : "@id"
+    },
+    "FrameworkConclusionContract" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#FrameworkConclusionContract"
+    },
+    "Place" : {
+      "@id" : "http://schema.org/Place"
+    },
+    "isDefinedBy" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+    },
+    "contractResolution" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#contractResolution",
+      "@type" : "@id"
+    },
+    "contractingBody" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#contractingBody",
+      "@type" : "@id"
+    },
+    "Lot" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#Lot"
+    },
+    "contractObject" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#contractObject",
+      "@type" : "@id"
+    },
+    "ConceptScheme" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+    },
+    "mainObject" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#mainObject",
+      "@type" : "@id"
+    },
+    "BundlePriceSpecification" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#BundlePriceSpecification"
+    },
+    "streetAddress" : {
+      "@id" : "http://schema.org/streetAddress"
+    },
+    "committee" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#committee",
+      "@type" : "@id"
+    },
+    "contractOrProcedureExtinction" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#contractOrProcedureExtinction",
+      "@type" : "@id"
+    },
+    "duration" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#duration",
+      "@type" : "http://www.w3.org/2001/XMLSchema#duration"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title"
+    },
+    "MultiannualContract" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#MultiannualContract"
+    },
+    "electronicAuctionPhase" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#electronicAuctionPhase",
+      "@type" : "@id"
+    },
+    "AgreementContract" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#AgreementContract"
+    },
+    "SharedResultAgreementContract" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#SharedResultAgreementContract"
+    },
+    "otherGuarantee" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#otherGuarantee",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "tenderDeadline" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#tenderDeadline",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "remedyResolution" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#remedyResolution",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "recurrentRemedy" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#recurrentRemedy",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "maxNumberOfOperators" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#maxNumberOfOperators",
+      "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+    },
+    "SuppliesContract" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#SuppliesContract"
+    },
+    "FormalizationNotice" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#FormalizationNotice"
+    },
+    "AwardCriteriaCombination" : {
+      "@id" : "http://purl.org/procurement/public-contracts#AwardCriteriaCombination"
+    },
+    "contractEconomicConditions" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#contractEconomicConditions",
+      "@type" : "@id"
+    },
+    "RentContract" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#RentContract"
+    },
+    "topConceptOf" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#topConceptOf",
+      "@type" : "@id"
+    },
+    "SubjectiveAwardCriterion" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#SubjectiveAwardCriterion"
+    },
+    "contractBodies" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#contractBodies",
+      "@type" : "@id"
+    },
+    "provisionalFinancialGuarantee" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#provisionalFinancialGuarantee",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "frameworkAgreement" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#frameworkAgreement",
+      "@type" : "@id"
+    },
+    "additionalObject" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#additionalObject",
+      "@type" : "@id"
+    },
+    "date" : {
+      "@id" : "http://purl.org/dc/terms/date"
+    },
+    "seeAlso" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
+    },
+    "procedureResignation" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#procedureResignation",
+      "@type" : "@id"
+    },
+    "noticeWeb" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#noticeWeb",
+      "@type" : "@id"
+    },
+    "tenderDocumentNeeds" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#tenderDocumentNeeds",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "noticeSentDate" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#noticeSentDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "requiredClassification" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#requiredClassification",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "supplier" : {
+      "@id" : "http://purl.org/procurement/public-contracts#supplier",
+      "@type" : "@id"
+    },
+    "ExpertCommittee" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#ExpertCommittee"
+    },
+    "criterionWeight" : {
+      "@id" : "http://purl.org/procurement/public-contracts#criterionWeight"
+    },
+    "broader" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#broader",
+      "@type" : "@id"
+    },
+    "PriceSpecification" : {
+      "@id" : "http://purl.org/goodrelations/v1#PriceSpecification"
+    },
+    "notice" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#notice",
+      "@type" : "@id"
+    },
+    "contractingBodyAgreement" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#contractingBodyAgreement",
+      "@type" : "@id"
+    },
+    "documentReference" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#documentReference",
+      "@type" : "@id"
+    },
+    "LegalRemedy" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#LegalRemedy"
+    },
+    "ContractExecutionConditions" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#ContractExecutionConditions"
+    },
+    "requiredEconomicAndFinancialStanding" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#requiredEconomicAndFinancialStanding",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "addressLocality" : {
+      "@id" : "http://schema.org/addressLocality"
+    },
+    "ContractWithoutLots" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#ContractWithoutLots"
+    },
+    "ContractOrProcedureExtinction" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#ContractOrProcedureExtinction"
+    },
+    "awardDate" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#awardDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "MixedContract" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#MixedContract"
+    },
+    "hasPriceSpecification" : {
+      "@id" : "http://purl.org/goodrelations/v1#hasPriceSpecification",
+      "@type" : "@id"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "isNegotiable" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#isNegotiable",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "executionRequeriments" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#executionRequeriments",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "feePrice" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#feePrice",
+      "@type" : "@id"
+    },
+    "price" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#price",
+      "@type" : "@id"
+    },
+    "remedy" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#remedy",
+      "@type" : "@id"
+    },
+    "priceReviewIndex" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#priceReviewIndex",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Document" : {
+      "@id" : "http://xmlns.com/foaf/0.1/Document"
+    },
+    "contractModificationConditions" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#contractModificationConditions",
+      "@type" : "@id"
+    },
+    "Briefing" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#Briefing"
+    },
+    "ContractActivities" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#ContractActivities"
+    },
+    "provision" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#provision",
+      "@type" : "@id"
+    },
+    "remedyReason" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#remedyReason",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "prorogationsExpected" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#prorogationsExpected",
+      "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+    },
+    "SpecialAdministrativeRemedy" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#SpecialAdministrativeRemedy"
+    },
+    "criterion" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#criterion",
+      "@type" : "@id"
+    },
+    "MixedCapitalCompanyContract" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#MixedCapitalCompanyContract"
+    },
+    "tenderSubmissionMode" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#tenderSubmissionMode",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "endMode" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#endMode",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "technicalDocumentReference" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#technicalDocumentReference",
+      "@type" : "@id"
+    },
+    "delegatingAuthority" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#delegatingAuthority",
+      "@type" : "@id"
+    },
+    "ContractProcedureSpecifications" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#ContractProcedureSpecifications"
+    },
+    "tenderDossierStartDate" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#tenderDossierStartDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "lodgedRemedyDate" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#lodgedRemedyDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "addressCountry" : {
+      "@id" : "http://schema.org/addressCountry"
+    },
+    "inScheme" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#inScheme",
+      "@type" : "@id"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/terms/description"
+    },
+    "DynamicPurchasingSystemDerivativeContract" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#DynamicPurchasingSystemDerivativeContract"
+    },
+    "actualDuration" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#actualDuration"
+    },
+    "criterionScore" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#criterionScore",
+      "@type" : "@id"
+    },
+    "criterionMaxAndMinScores" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#criterionMaxAndMinScores",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "variantAdmission" : {
+      "@id" : "http://contsem.unizar.es/def/sector-publico/pproc#variantAdmission",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    }
+  }
+}
