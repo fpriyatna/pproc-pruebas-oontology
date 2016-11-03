@@ -1,0 +1,14 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+<..\index-en.html> a prov:Entity;
+	 prov:wasAttributedTo <http://www.araid.es/en/users/jfm#profile-investigador>;
+	 dc:creator <http://www.araid.es/en/users/jfm#profile-investigador>;
+	 prov:wasAttributedTo <https://www.linkedin.com/profile/view?id=218098827>;
+	 dc:creator <https://www.linkedin.com/profile/view?id=218098827>;
+	 prov:wasAttributedTo <http://es.linkedin.com/pub/guillermo-esteban-p%C3%A9rez/56/210/5a8>;
+	 dc:creator <http://es.linkedin.com/pub/guillermo-esteban-p%C3%A9rez/56/210/5a8>;
+	 prov:wasAttributedTo <http://webdiis.unizar.es/~seron/>;
+	 dc:creator <http://webdiis.unizar.es/~seron/>;
+	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+.
